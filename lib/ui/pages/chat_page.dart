@@ -15,7 +15,6 @@ class ChatPage extends StatefulWidget {
 
 class _ChatPageState extends State<ChatPage> {
   final GeminiService _geminiService = GeminiService();
-
   final ChatUser _currentUser = ChatUser(id: '1', firstName: 'You');
   final ChatUser _geminiUser = ChatUser(
     id: '2',
@@ -128,7 +127,7 @@ class _ChatPageState extends State<ChatPage> {
         _sendImageMessage(imageFile);
       }
     } catch (e) {
-      if (!mounted) return; 
+      if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text('Gagal membuka kamera: ${e.toString()}'),
@@ -157,44 +156,42 @@ class _ChatPageState extends State<ChatPage> {
           ),
         ],
       ),
-      body: GradientBackground(
-        child: DashChat(
-          currentUser: _currentUser,
-          onSend: _sendMessage,
-          messages: _messages,
-          typingUsers: _isTyping ? [_geminiUser] : [],
-          messageOptions: MessageOptions(
-            currentUserContainerColor: blue,
-            containerColor: white,
-            textColor: darkGray,
-            showTime: true,
-            messagePadding: const EdgeInsets.all(12),
-            borderRadius: 18.0,
-          ),
-          inputOptions: InputOptions(
-            inputTextStyle: TextStyle(color: darkGray),
-            cursorStyle: CursorStyle(color: darkGray),
-            inputDecoration: InputDecoration(
-              filled: true,
-              fillColor: white,
-              hintText: "Ketikkan sesuatu...",
-              hintStyle: TextStyle(color: softGray),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(30),
-                borderSide: BorderSide.none,
-              ),
-              contentPadding:
-                  const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      body: DashChat(
+        currentUser: _currentUser,
+        onSend: _sendMessage,
+        messages: _messages,
+        typingUsers: _isTyping ? [_geminiUser] : [],
+        messageOptions: MessageOptions(
+          currentUserContainerColor: blue,
+          containerColor: white,
+          textColor: darkGray,
+          showTime: true,
+          messagePadding: const EdgeInsets.all(12),
+          borderRadius: 18.0,
+        ),
+        inputOptions: InputOptions(
+          inputTextStyle: TextStyle(color: darkGray),
+          cursorStyle: CursorStyle(color: darkGray),
+          inputDecoration: InputDecoration(
+            filled: true,
+            fillColor: white,
+            hintText: "Ketikkan sesuatu...",
+            hintStyle: TextStyle(color: softGray),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(30),
+              borderSide: BorderSide.none,
             ),
-            // Tambahkan trailing widget untuk tombol kamera
-            trailing: [
-              IconButton(
-                icon: Icon(Icons.camera_alt, color: blue),
-                onPressed: _openCamera,
-                tooltip: 'Ambil Foto',
-              ),
-            ],
+            contentPadding:
+                const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           ),
+          // Tambahkan trailing widget untuk tombol kamera
+          trailing: [
+            IconButton(
+              icon: Icon(Icons.camera_alt, color: blue),
+              onPressed: _openCamera,
+              tooltip: 'Ambil Foto',
+            ),
+          ],
         ),
       ),
     );
