@@ -44,7 +44,7 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-# Sensitive Files
+# Sensitive files
 .env
 .env.*
 google-services.json
