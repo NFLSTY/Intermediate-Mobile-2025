@@ -25,7 +25,7 @@ class _LoginPageState extends State<LoginPage> {
     return BlocListener<AuthBloc, AuthState>(
       listener: (context, state) {
         if (state is AuthAuthenticated) {
-          Navigator.pushNamedAndRemoveUntil(context, '/chatscreen', (route) => false);
+          Navigator.pushNamedAndRemoveUntil(context, '/chatpage', (route) => false); // Linked from main.dart (don't write the wrong navigation name!)
         } else if (state is AuthError) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
