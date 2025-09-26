@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:serene/shared/theme.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -10,6 +11,15 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: lightPink,
+      body: Center(
+        child: Image.asset(
+          "assets/icon.png",
+          width: 120,
+          height: 120,
+        ),
+      ),
+    );
   }
 }
