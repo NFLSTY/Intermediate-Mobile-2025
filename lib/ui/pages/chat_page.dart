@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:serene/services/gemini_service.dart';
 import 'package:serene/shared/theme.dart';
 import 'package:serene/ui/pages/camera_page.dart';
-import 'package:serene/ui/widgets/gradient_background.dart';
 
 class ChatPage extends StatefulWidget {
   const ChatPage({super.key});

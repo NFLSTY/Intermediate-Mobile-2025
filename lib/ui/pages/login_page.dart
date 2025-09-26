@@ -7,7 +7,6 @@ import 'package:serene/shared/theme.dart';
 import 'package:serene/ui/widgets/app_logo.dart';
 import 'package:serene/ui/widgets/custom_button.dart';
 import 'package:serene/ui/widgets/custom_text_field.dart';
-import 'package:serene/ui/widgets/gradient_background.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
