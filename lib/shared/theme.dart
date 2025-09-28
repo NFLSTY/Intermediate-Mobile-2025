@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 Color white = const Color(0xFFFFFFFF);
 Color black = const Color(0xFF000000);
@@ -12,13 +13,30 @@ Color peach = const Color(0xFFFFE4CC);
 Color darkGray = const Color(0xFF2C2C2C);
 Color softGray = const Color(0xFF666666);
 
-TextStyle headingStyle = TextStyle(
+TextStyle headingStyle = GoogleFonts.poppins(
   fontSize: 32,
   fontWeight: FontWeight.bold,
   color: black,
 );
-TextStyle subHeadingStyle = TextStyle(
+
+TextStyle subHeadingStyle = GoogleFonts.poppins(
   fontSize: 18,
   color: black,
   fontWeight: FontWeight.w600
+);
+
+TextStyle primaryColorTextStyle = GoogleFonts.poppins(
+  color: lavender,
+);
+
+TextStyle whiteColorTextStyle = GoogleFonts.poppins(
+  color: white,
+);
+
+TextStyle blackColorTextStyle = GoogleFonts.poppins(
+  color: black,
+);
+
+TextStyle greyColorTextStyle = GoogleFonts.poppins(
+  color: darkGray,
 );
