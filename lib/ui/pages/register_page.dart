@@ -47,20 +47,25 @@ class _RegisterPageState extends State<RegisterPage> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(
-                            height: 24,
+                            height: 32,
                           ),
                           Center(
                             child: Text(
                               'Sign Up',
-                              
+                              style: blackColorTextStyle.copyWith(
+                                fontSize: 24
+                              ),
                             ),
                           ),
                           SizedBox(
-                            height: 21,
+                            height: 32,
                           ),
                           Text(
                             'Username',
-
+                            style: blackColorTextStyle.copyWith(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500
+                            ),
                           ),
                           SizedBox(
                             height: 4,
@@ -70,6 +75,10 @@ class _RegisterPageState extends State<RegisterPage> {
                               filled: true,
                               fillColor: white,
                               hintText: 'Masukkan username',
+                              hintStyle: greyColorTextStyle.copyWith(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w200
+                              ),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(12)
                               )
@@ -80,7 +89,10 @@ class _RegisterPageState extends State<RegisterPage> {
                           ),
                           Text(
                             'Email',
-
+                            style: blackColorTextStyle.copyWith(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500
+                            ),
                           ),
                           SizedBox(
                             height: 4,
@@ -90,6 +102,10 @@ class _RegisterPageState extends State<RegisterPage> {
                               filled: true,
                               fillColor: white,
                               hintText: 'Masukkan Email',
+                              hintStyle: greyColorTextStyle.copyWith(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w200
+                              ),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(12)
                               )
@@ -100,7 +116,10 @@ class _RegisterPageState extends State<RegisterPage> {
                           ),
                           Text(
                             'Password',
-
+                            style: blackColorTextStyle.copyWith(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w200
+                            ),
                           ),
                           SizedBox(
                             height: 4,
@@ -111,6 +130,10 @@ class _RegisterPageState extends State<RegisterPage> {
                               filled: true,
                               fillColor: white,
                               hintText: 'Masukkan Password',
+                              hintStyle: greyColorTextStyle.copyWith(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w200
+                              ),
                               suffixIcon: Icon(Icons.visibility),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(12)
@@ -122,7 +145,10 @@ class _RegisterPageState extends State<RegisterPage> {
                           ),
                           Text(
                             'Konfirmasi Password',
-
+                            style: blackColorTextStyle.copyWith(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500
+                            )
                           ),
                           SizedBox(
                             height: 4,
@@ -132,6 +158,10 @@ class _RegisterPageState extends State<RegisterPage> {
                             decoration: InputDecoration(
                               fillColor: white,
                               hintText: 'Konfirmasi Password',
+                              hintStyle: greyColorTextStyle.copyWith(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w200
+                              ),
                               suffixIcon: Icon(Icons.visibility),
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(12)
@@ -146,7 +176,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             height: 50,
                             child: ElevatedButton(
                               onPressed: () {
-                                
+                                // router
                               }, 
                               child: Text(
                                 'Sign Up'
@@ -161,13 +191,15 @@ class _RegisterPageState extends State<RegisterPage> {
                             height: 50,
                             child: ElevatedButton.icon(
                               onPressed: () {
-
+                                // login Google
                               }, 
                               icon: Image.asset(
                                 'assets'
                               ),
                               label: Text('Masuk dengan Google',
-                              
+                              style: blackColorTextStyle.copyWith(
+                                fontSize: 14
+                              ),
                               ),
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.white,
@@ -184,16 +216,20 @@ class _RegisterPageState extends State<RegisterPage> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                'Sudah memiliki akun?'
-
+                                'Sudah memiliki akun?',
+                                style: blackColorTextStyle.copyWith(
+                                  fontSize: 12
+                                ),
                               ),
                               TextButton(
                                 onPressed: () {
-
+                                  // router
                                 }, 
                                 child: Text(
                                   'Login Disini',
-
+                                  style: blackColorTextStyle.copyWith(
+                                    fontSize: 12
+                                  ),
                                 )
                               )
                             ],
