@@ -19,6 +19,21 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         emit(AuthInitial());  
       }
     });
+
+    on<RegisterRequested>((event, emit) async {
+      emit(AuthLoading());
+      try {
+        UserCredential userCredential = await _auth.createUserWithEmailAndPassword(
+          email: event.email, 
+          password: event.password
+        );
+        emit(AuthAuthenticated(userCredential.user!));
+      } catch (e) {
+        emit(AuthError("Register gagal: ${e.toString()}"));
+        emit(AuthInitial());  
+      }
+    });
+
     on<LogoutRequested>((event, emit) async {
       await _auth.signOut();
       emit(AuthUnauthenticated());
