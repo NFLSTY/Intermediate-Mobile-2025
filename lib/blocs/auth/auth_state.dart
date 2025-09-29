@@ -6,6 +6,8 @@ final class AuthInitial extends AuthState {}
 
 final class AuthLoading extends AuthState {}
 
+final class AutStateRegister extends AuthState {}
+
 final class AuthAuthenticated extends AuthState {
   final User user;
   AuthAuthenticated(this.user);
