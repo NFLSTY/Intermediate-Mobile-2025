@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:serene/blocs/auth/auth_bloc.dart' show AuthBloc;
-import 'package:serene/ui/pages/login_page.dart';
-import 'package:serene/ui/pages/chat_page.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:serene/routes/router.dart';
 
 Future<void>main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,13 +23,10 @@ class MyApp extends StatelessWidget {
           create: (context) => AuthBloc(),
         ),
       ],
-      child: MaterialApp(
+      child: MaterialApp.router(
         title: 'Serene',
-        home: const LoginPage(),
-        routes: {
-          '/login': (context) => const LoginPage(),
-          '/chatpage': (context) => const ChatPage(), // used in login_page.dart
-        },
+        debugShowCheckedModeBanner: false,
+        routerConfig: router,
       ),
     );
   }
