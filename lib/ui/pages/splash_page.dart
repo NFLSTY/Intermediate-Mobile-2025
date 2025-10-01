@@ -15,7 +15,7 @@ class _SplashPageState extends State<SplashPage> {
       backgroundColor: lightPink,
       body: Center(
         child: Image.asset(
-          "assets/icon.png",
+          "assets/logo.png",
           width: 120,
           height: 120,
         ),
