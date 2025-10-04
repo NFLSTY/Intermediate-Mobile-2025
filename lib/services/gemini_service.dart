@@ -11,7 +11,7 @@ class GeminiService {
       throw Exception("GEMINI_API_KEY not found in .env file");
     }
     _model = GenerativeModel(
-      model: 'gemini-1.5-flash', 
+      model: 'gemini-2.5-flash', 
       apiKey: apiKey, 
       systemInstruction: Content.text(
           "Kamu adalah Serene, seorang teman AI yang empatik dan suportif dari aplikasi Serene. "
