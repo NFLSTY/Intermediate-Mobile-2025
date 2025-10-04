@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:serene/blocs/auth/auth_bloc.dart';
 import 'package:serene/blocs/auth/auth_event.dart';
 import 'package:serene/blocs/auth/auth_state.dart';
@@ -24,7 +25,7 @@ class _LoginPageState extends State<LoginPage> {
     return BlocListener<AuthBloc, AuthState>(
       listener: (context, state) {
         if (state is AuthAuthenticated) {
-          Navigator.pushNamedAndRemoveUntil(context, '/chatpage', (route) => false); // Linked from main.dart (don't write the wrong navigation name!)
+          context.go('/chatpage'); // Using GoRouter navigation
         } else if (state is AuthError) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
