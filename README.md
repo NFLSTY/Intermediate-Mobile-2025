@@ -2,18 +2,12 @@
 
 A new Flutter project.
 
-## Getting Started
+## References
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- https://medium.com/@difadlyaulhaq2/building-ai-powered-flutter-app-step-by-step-tutorial-5ad5f4810049
+- https://github.com/difadlyaulhaq/serene.git
+- https://ai.google.dev/gemini-api/docs
+- https://dart.dev/docs
 
 ## Solving Bugs/Errors
 
@@ -25,3 +19,11 @@ samples, guidance on mobile development, and a full API reference.
 - Many error lines about cache --> make sure to place the Pub cache and Flutter project in the same directory*
 
 *Refers to: https://dart.dev/tools/pub/environment-variables
+
+## Notes
+
+September 29, 2025
+The following Gemini 1.5 models are now deprecated:
+- gemini-1.5-pro
+- gemini-1.5-flash-8b
+- gemini-1.5-flash
